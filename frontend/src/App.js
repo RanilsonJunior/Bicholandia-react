@@ -73,7 +73,7 @@ function App() {
       >
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Navbar bg="dark" variant="dark" expand="lg">
+          <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
             <Container>
               <Button
                 variant="dark"
@@ -87,7 +87,7 @@ function App() {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <SearchBox />
-                <Nav className="me-auto w-100 justify-content-end">
+                <Nav className="me-auto w-100 justify-content-end navbarScroll ">
                   <Link to="/cart" className="nav-link">
                     Carrinho
                     {/* Se cart.cartItems do react context existe e for maior que zero, signfica que temos itens no cart, então vou mostrar o Badge e mostrar o número. */}
