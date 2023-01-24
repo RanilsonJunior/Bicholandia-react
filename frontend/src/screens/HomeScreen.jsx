@@ -2,10 +2,10 @@ import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Product from '../components/Product';
+import Product from '../Components/Product';
 import { Helmet } from 'react-helmet-async';
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
+import LoadingBox from '../Components/LoadingBox';
+import MessageBox from '../Components/MessageBox';
 
 /* O primeiro parametro é o estado atual e a segunda é a ação que muda o estado e cria um novo estado */
 const reducer = (state, action) => {

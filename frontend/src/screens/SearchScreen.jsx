@@ -6,11 +6,11 @@ import { getError } from '../utils';
 import { Helmet } from 'react-helmet-async';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Rating from '../components/Rating';
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
+import Rating from '../Components/Rating';
+import LoadingBox from '../Components/LoadingBox';
+import MessageBox from '../Components/MessageBox';
 import Button from 'react-bootstrap/Button';
-import Product from '../components/Product';
+import Product from '../Components/Product';
 import LinkContainer from 'react-router-bootstrap/LinkContainer';
 
 const reducer = (state, action) => {
@@ -118,14 +118,16 @@ export default function SearchScreen() {
     fetchCategories();
   }, [dispatch]);
 
-  const getFilterUrl = (filter) => {
+  const getFilterUrl = (filter, skipPathname) => {
     const filterPage = filter.page || page;
     const filterCategory = filter.category || category;
     const filterQuery = filter.query || query;
     const filterRating = filter.rating || rating;
     const filterPrice = filter.price || price;
     const sortOrder = filter.order || order;
-    return `/search?category=${filterCategory}&query=${filterQuery}&price=${filterPrice}&rating=${filterRating}&order=${sortOrder}&page=${filterPage}`;
+    return `${
+      skipPathname ? '' : '/search?'
+    }category=${filterCategory}&query=${filterQuery}&price=${filterPrice}&rating=${filterRating}&order=${sortOrder}&page=${filterPage}`;
   };
   return (
     <div>
@@ -243,7 +245,9 @@ export default function SearchScreen() {
                     <option value="newest">Novidades</option>
                     <option value="lowest">preço: Baixo para Alto</option>
                     <option value="highest">preço: Alto para Baixo</option>
-                    <option value="toprated">Média Opinião dos Consumidores</option>
+                    <option value="toprated">
+                      Média Opinião dos Consumidores
+                    </option>
                   </select>
                 </Col>
               </Row>
@@ -264,7 +268,10 @@ export default function SearchScreen() {
                   <LinkContainer
                     key={x + 1}
                     className="mx-1"
-                    to={getFilterUrl({ page: x + 1 })}
+                    to={{
+                      pathname: '/search',
+                      search: getFilterUrl({ page: x + 1 }, true),
+                    }}
                   >
                     <Button
                       className={Number(page) === x + 1 ? 'text-bold' : ''}

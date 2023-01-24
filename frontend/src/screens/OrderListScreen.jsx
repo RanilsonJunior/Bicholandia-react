@@ -3,8 +3,8 @@ import React, { useContext, useEffect, useReducer } from 'react';
 import Button from 'react-bootstrap/Button';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
+import LoadingBox from '../Components/LoadingBox';
+import MessageBox from '../Components/MessageBox';
 import { Store } from '../Store';
 import { getError } from '../utils';
 

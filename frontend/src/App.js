@@ -23,10 +23,10 @@ import ProfileScreen from './screens/ProfileScreen';
 import Button from 'react-bootstrap/Button';
 import { getError } from './utils';
 import axios from 'axios';
-import SearchBox from './components/SearchBox';
+import SearchBox from './Components/SearchBox';
 import SearchScreen from './screens/SearchScreen';
-import ProtectedRoute from './components/ProtectedRoute';
-import AdminRoute from './components/AdminRoute';
+import ProtectedRoute from './Components/ProtectedRoute';
+import AdminRoute from './Components/AdminRoute';
 import DashboardScreen from './screens/DashboardScreen';
 import ProductListScreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
@@ -104,7 +104,9 @@ function App() {
                         <NavDropdown.Item>Perfil de Usuário</NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/orderhistory">
-                        <NavDropdown.Item>Histórico de Pedidos</NavDropdown.Item>
+                        <NavDropdown.Item>
+                          Histórico de Pedidos
+                        </NavDropdown.Item>
                       </LinkContainer>
                       <NavDropdown.Divider />
                       <Link
@@ -156,7 +158,10 @@ function App() {
             {categories.map((category) => (
               <Nav.Item key={category}>
                 <LinkContainer
-                  to={`/search?category=${category}`}
+                  to={{
+                    pathname: '/search',
+                    search: `category=${category}`,
+                  }}
                   onClick={() => setSidebarIsOpen(false)}
                 >
                   <Nav.Link>{category}</Nav.Link>
@@ -249,7 +254,7 @@ function App() {
                   </AdminRoute>
                 }
               ></Route>
-            {/* Editar os IDS */}
+              {/* Editar os IDS */}
               <Route
                 path="/admin/user/:id"
                 element={

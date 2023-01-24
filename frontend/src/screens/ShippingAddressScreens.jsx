@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { Store } from '../Store';
-import CheckoutSteps from '../components/CheckoutSteps';
+import CheckoutSteps from '../Components/CheckoutSteps';
 
 export default function ShippingAddressScreen() {
   const navigate = useNavigate();

@@ -8,10 +8,10 @@ import { Helmet } from 'react-helmet-async';
 import { toast } from 'react-toastify';
 import { getError } from '../utils'
 import { Store } from '../Store';
-import CheckoutSteps from '../components/CheckoutSteps';
+import CheckoutSteps from '../Components/CheckoutSteps';
 import Col from 'react-bootstrap/esm/Col';
 import Axios from 'axios';
-import LoadingBox from '../components/LoadingBox';
+import LoadingBox from '../Components/LoadingBox';
 
 const reducer = (state, action) => {
   switch (action.type) {
