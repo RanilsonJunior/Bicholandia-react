@@ -7,7 +7,7 @@ import Badge from 'react-bootstrap/Badge';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { Store } from './Store';
 import CartScreen from './screens/CartScreen';
 import SigninScreen from './screens/SigninScreen';
@@ -33,6 +33,9 @@ import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
+import { SegoeUI, openDyslexic, tahoma } from './changeFontFamily';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 function App() {
   // Para obter o cart.
@@ -122,6 +125,22 @@ function App() {
                       Entrar
                     </Link>
                   )}
+                  <DropdownButton
+                    id="dropdown-item-button"
+                    title="acessibilidade"
+                  >
+                    <Dropdown.ItemText>Fonts</Dropdown.ItemText>
+                    <Dropdown.Divider />
+                    <Dropdown.Item as="button" onClick={SegoeUI}>
+                      Segoe UI (Padrão)
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button" onClick={tahoma}>
+                      Tahoma
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button" onClick={openDyslexic}>
+                      Open Dyslexic
+                    </Dropdown.Item>
+                  </DropdownButton>
                   {/* Caso userInfo exista, então userinfo.isAdmin é true. Basicamente se você tiver admin, então vaia aparecer isso na tela.*/}
                   {userInfo && userInfo.isAdmin && (
                     <NavDropdown title="Admin" id="admin-nav-dropdown">

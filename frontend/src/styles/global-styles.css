@@ -7,17 +7,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding-top: 56px;
 }
+
+@font-face {
+  font-family: "OpenDyslexic";  
+  src: url("../font/OpenDyslexic-Regular.otf");
+}
+
 .site-container {
   min-height: 100vh;
 }
+
 main {
   flex: 1;
 }
+
 .btn-primary,
 .btn-outline-primary {
   background-color: #f0c040;
   color: #000000;
 }
+
 .products {
   display: flex;
   flex-wrap: wrap;
