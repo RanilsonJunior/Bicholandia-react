@@ -90,3 +90,8 @@ main {
 .text-bold {
   font-weight: bold;
 }
+
+.carouselImg {
+  width: 100%;
+  height: 300px;
+}

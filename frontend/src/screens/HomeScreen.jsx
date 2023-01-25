@@ -6,6 +6,7 @@ import Product from '../Components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../Components/LoadingBox';
 import MessageBox from '../Components/MessageBox';
+import Carousel from 'react-bootstrap/Carousel';
 
 /* O primeiro parametro é o estado atual e a segunda é a ação que muda o estado e cria um novo estado */
 const reducer = (state, action) => {
@@ -54,6 +55,48 @@ function HomeScreen() {
       <Helmet>
         <title>Bicholandia</title>
       </Helmet>
+      <section>
+        <div className="main-slide my-5">
+          <Carousel variant="dark">
+            <Carousel.Item interval={3000}>
+              <img
+                className="carouselImg d-block w-10 rounded"
+                src="https://res.cloudinary.com/dcf2nu601/image/upload/v1674648274/slide01_y8hk7g.gif"
+                alt="First slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item interval={3000}>
+              <img
+                className="carouselImg d-block w-100 rounded"
+                src="https://res.cloudinary.com/dcf2nu601/image/upload/v1674648273/slide02_ytscuo.gif"
+                alt="Second slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item interval={3000}>
+              <img
+                className="carouselImg d-block w-100 rounded"
+                src="https://res.cloudinary.com/dcf2nu601/image/upload/v1674648273/slide03_ltkhch.png"
+                alt="Third slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item interval={3000}>
+              <img
+                className="carouselImg d-block w-100 rounded"
+                src="https://res.cloudinary.com/dcf2nu601/image/upload/v1674648273/slide04_srnmkz.png"
+                alt="First slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item interval={3000}>
+              <img
+                className="carouselImg d-block w-100 rounded"
+                src="https://res.cloudinary.com/dcf2nu601/image/upload/v1674648275/slide05_bzw0sm.gif"
+                alt="First slide"
+                style={{ width: 1340 }}
+              />
+            </Carousel.Item>
+          </Carousel>
+        </div>
+      </section>
       <h1>Produtos em Destaque</h1>
       <div className="products">
         {loading ? (
