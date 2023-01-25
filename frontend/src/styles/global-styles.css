@@ -9,8 +9,8 @@ body {
 }
 
 @font-face {
-  font-family: "OpenDyslexic";  
-  src: url("../font/OpenDyslexic-Regular.otf");
+  font-family: 'OpenDyslexic';
+  src: url('../font/OpenDyslexic-Regular.otf');
 }
 
 .site-container {
@@ -103,4 +103,58 @@ main {
 .carouselImg {
   width: 100%;
   height: 300px;
+}
+
+.img-logo {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  transition: all 0.2s ease-out;
+}
+.img-logo:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.logo-container-main {
+  display: flex;
+  align-items: center;
+  height: 20rem;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: block;
+  width: 200%;
+  margin: 70px 0;
+  position: absolute;
+  animation: movimentacao 55s linear infinite;
+}
+
+.logo-container:hover {
+  animation-play-state: paused;
+}
+
+.logo-container span {
+  float: left;
+  width: 50%;
+}
+
+.container1,
+.container2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@keyframes movimentacao {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
 }

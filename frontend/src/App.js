@@ -7,7 +7,7 @@ import Badge from 'react-bootstrap/Badge';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Store } from './Store';
 import CartScreen from './screens/CartScreen';
 import SigninScreen from './screens/SigninScreen';
@@ -285,8 +285,8 @@ function App() {
               <Route path="/" element={<HomeScreen />} />
             </Routes>
           </Container>
-        </main>
-        <footer className="bg-dark text-center text-white">
+        </main>       
+        <footer className="bg-dark text-center text-white mt-5">
           <div className="container p-4 pb-0">
             <section className="mb-4">
               <a

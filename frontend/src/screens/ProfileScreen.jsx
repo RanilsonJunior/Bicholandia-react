@@ -24,6 +24,7 @@ const reducer = (state, action) => {
 export default function ProfileScreen() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { userInfo } = state;
+
   const [name, setName] = useState(userInfo.name);
   const [email, setEmail] = useState(userInfo.email);
   const [password, setPassword] = useState('');
@@ -47,12 +48,13 @@ export default function ProfileScreen() {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         }
       );
+      // Caso tudo de ok, então o dispatch vai receber o update_success.
       dispatch({
         type: 'UPDATE_SUCCESS',
       });
       ctxDispatch({ type: 'USER_SIGNIN', payload: data });
       localStorage.setItem('userInfo', JSON.stringify(data));
-      toast.success('User updated successfully');
+      toast.success('Usuário atualizado com sucesso');
     } catch (err) {
       dispatch({
         type: 'FETCH_FAIL',

@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../Components/LoadingBox';
 import MessageBox from '../Components/MessageBox';
 import Carousel from 'react-bootstrap/Carousel';
+import { SlideLogo } from './SlideLogoScreen';
 
 /* O primeiro parametro é o estado atual e a segunda é a ação que muda o estado e cria um novo estado */
 const reducer = (state, action) => {
@@ -114,6 +115,7 @@ function HomeScreen() {
           </Row>
         )}
       </div>
+      <SlideLogo />
     </div>
   );
 }
