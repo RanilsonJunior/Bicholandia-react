@@ -18,11 +18,7 @@ export const SlideLogo = () => {
             src="https://res.cloudinary.com/dcf2nu601/image/upload/v1674670241/logo-pedigree_ew8gof.png"
             alt="Logo da pedigree"
           />
-          <img
-            className="img-logo"
-            src="https://res.cloudinary.com/dcf2nu601/image/upload/v1674670240/logo-pro-plan_xvs3dq.png"
-            alt="Logo da pro plan"
-          />
+         
           <img
             className="img-logo"
             src="https://res.cloudinary.com/dcf2nu601/image/upload/v1674670240/logo-gran-plus_t90hq7.png"
@@ -61,11 +57,7 @@ export const SlideLogo = () => {
             src="https://res.cloudinary.com/dcf2nu601/image/upload/v1674670241/logo-pedigree_ew8gof.png"
             alt="Logo da pedigree"
           />
-          <img
-            className="img-logo"
-            src="https://res.cloudinary.com/dcf2nu601/image/upload/v1674670240/logo-pro-plan_xvs3dq.png"
-            alt="Logo da pro plan"
-          />
+         
           <img
             className="img-logo"
             src="https://res.cloudinary.com/dcf2nu601/image/upload/v1674670240/logo-gran-plus_t90hq7.png"

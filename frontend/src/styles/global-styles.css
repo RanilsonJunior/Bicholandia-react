@@ -105,6 +105,10 @@ main {
   height: 300px;
 }
 
+
+
+
+
 .img-logo {
   width: 100px;
   height: 100px;
@@ -128,11 +132,12 @@ main {
 }
 
 .logo-container {
+  
   display: block;
   width: 200%;
   margin: 70px 0;
   position: absolute;
-  animation: movimentacao 55s linear infinite;
+  animation: movimentacao 30s linear infinite;
 }
 
 .logo-container:hover {
@@ -157,4 +162,16 @@ main {
   100% {
     left: -100%;
   }
+}
+
+@media (max-width: 992px)
+{
+  .logo-container {
+    width: 400%;
+   }
+
+    .container1 {
+      display: none;
+      }
+
 }
