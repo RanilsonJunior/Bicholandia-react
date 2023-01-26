@@ -41,6 +41,7 @@ export default function UserEditScreen() {
 
   const params = useParams();
   const { id: userId } = params;
+
   const navigate = useNavigate();
 
   const [name, setName] = useState('');
@@ -82,7 +83,7 @@ export default function UserEditScreen() {
       dispatch({
         type: 'UPDATE_SUCCESS',
       });
-      toast.success('User updated successfully');
+      toast.success('Usuário atualizado com sucesso');
       navigate('/admin/users');
     } catch (error) {
       toast.error(getError(error));

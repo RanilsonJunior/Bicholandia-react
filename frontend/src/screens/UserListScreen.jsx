@@ -72,13 +72,13 @@ export default function UserListScreen() {
   }, [userInfo, successDelete]);
 
   const deleteHandler = async (user) => {
-    if (window.confirm('Are you sure to delete?')) {
+    if (window.confirm('Você tem certeza que quer deletar?')) {
       try {
         dispatch({ type: 'DELETE_REQUEST' });
         await axios.delete(`/api/users/${user._id}`, {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         });
-        toast.success('user deleted successfully');
+        toast.success('Usuário deletado com sucesso');
         dispatch({ type: 'DELETE_SUCCESS' });
       } catch (error) {
         toast.error(getError(error));
@@ -107,7 +107,7 @@ export default function UserListScreen() {
               <th>ID</th>
               <th>NOME</th>
               <th>EMAIL</th>
-              <th>É ADMINISTRADOR</th>
+              <th>ADMINISTRADOR</th>
               <th>AÇÕES</th>
             </tr>
           </thead>
