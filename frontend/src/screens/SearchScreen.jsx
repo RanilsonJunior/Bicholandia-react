@@ -36,15 +36,15 @@ const reducer = (state, action) => {
 
 const prices = [
   {
-    name: '$1 to $50',
+    name: 'R$1 to R$50',
     value: '1-50',
   },
   {
-    name: '$51 to $200',
+    name: 'R$51 to R$200',
     value: '51-200',
   },
   {
-    name: '$201 to $1000',
+    name: 'R$201 to R$1000',
     value: '201-1000',
   },
 ];
@@ -246,7 +246,7 @@ export default function SearchScreen() {
                     <option value="lowest">preço: Baixo para Alto</option>
                     <option value="highest">preço: Alto para Baixo</option>
                     <option value="toprated">
-                      Média Opinião dos Consumidores
+                      Média de Opinião dos Consumidores
                     </option>
                   </select>
                 </Col>

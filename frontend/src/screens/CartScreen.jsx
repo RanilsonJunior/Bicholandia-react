@@ -90,7 +90,7 @@ export default function CartScreen() {
                         <i className="fas fa-plus-circle"></i>
                       </Button>
                     </Col>
-                    <Col md={3}>${item.price}</Col>
+                    <Col md={3}>R${item.price}</Col>
                     <Col md={2}>
                       {/* Botão para remover o item. */}
                       <Button
@@ -114,7 +114,7 @@ export default function CartScreen() {
                   <h3>
                     {/* Está somando a quantidades em cartItems, como um subtotal e mostrar o número de itens */}
                     Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
-                    items) : $
+                    items) : R$
                     {/* Está multiplicando o preço por quantidade, e somando cada um pelo acumulador de resultados anteriores. */}
                     {cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}
                   </h3>
